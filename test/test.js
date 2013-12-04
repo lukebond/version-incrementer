@@ -31,6 +31,16 @@ describe('version-incrementer', function() {
             assert.strictEqual(terms[1], '10');
             assert.strictEqual(terms[2], '0');
         });
+        it('should do nothing if input not in the correct form', function() {
+            var ver = '1.00';
+            var newVer = increment(ver);
+            assert.strictEqual(ver, newVer);
+        });
+        it('should do nothing if input not in the correct form', function() {
+            var ver = '1.0.0.0';
+            var newVer = increment(ver);
+            assert.strictEqual(ver, newVer);
+        });
     });
     describe('#major', function() {
         it('should reset build and minor numbers when incrementing major number', function() {

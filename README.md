@@ -7,6 +7,8 @@ The build & minor numbers are incremented according to the following rules:
 * It won't wrap the minor number (ie. '10' is okay).
 * It won't wrap the major number (there's a separate method for that).
 
+If the input isn't in the form x.y.z then it will just return the value that you pass in.
+
 Inspired by mparke's [increment-version](https://github.com/mparke/increment-version), but works off a string rather than a file.
 
 ## Example
